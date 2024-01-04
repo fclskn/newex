@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolar Kuru</title>
+    <style>
+
+:root {
+        --gradient-start: #000000; /* Başlangıç rengi (mor) */
+        --gradient-end: #004d99;   /* Bitiş rengi (siyah) */
+    }
+    
+    body {
+   
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+        align-items: center;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+    }
+    
+    .content {
+        text-align: center;
+    }
+
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        /* Link tasarımı */
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgba;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 1.5s;
+}
+
+a:hover {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+}
+
+        
+       
+        
+
+        /* Diğer stil kodları devam ediyor... */
+
+/* Hover Efekti */
+.button:hover {
+    transform: scale(1.1); /* Butonun boyutunu büyütme */
+    background-color: #004080; /* Arkaplan rengini değiştirme */
+}
+
+/* Dolar ve Euro konteynerlerine gölge ekleme */
+.currency-container {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Haber konteynerine gölge ekleme */
+.news-container {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hava durumu konteynerine gölge ekleme */
+.weather-container {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Haber başlıklarını altı çizili yapma */
+.news-title {
+    text-decoration: underline;
+}
+
+/* Sayfa başlığına gölge ekleme */
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dolar ve Euro sembolünü renklendirme */
+.currency-symbol {
+    color: #ffffff;
+}
+
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+       
+
+
+        .weather-container {
+
+    margin-top: 20px;
+    background: linear-gradient(to right, var(--gradient-end), var(--gradient-start));
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.weather-info {
+    margin-bottom: 15px;
+}
+
+.weather-city,
+.weather-temperature,
+.weather-description {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+        .news-container {
+    margin-top: 20px;
+        background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.news-item {
+    margin-bottom: 15px;
+}
+
+.news-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.news-description {
+    font-size: 11px;
+    color: #ffffff;
+}
+
+        .currency-container {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--gradient-end), var(--gradient-start));
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .currency-symbol {
+            margin-right: 10px;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .currency-container{
+
+            color: #fff;
+
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <!-- ... (mevcut içerik) ... -->
+    <a href="/register">Çıkış Yap</a>
+<!-- ... (mevcut içerik) ... -->
+
+
+    <div class="schema-container">
+        <h2>Döviz Endeksli Haber Sitesi</h2>
+    </div>
+
+    <div class="currency-container">
+        <div class="currency-symbol">$</div>
+        <div id="dollar-value">Loading...</div>
+    </div>
+    <div class="currency-container">
+        <div class="currency-symbol">€</div>
+        <div id="euro-value">Loading...</div>
+    </div>
+    
+
+    <a href="/sayfa2">Kur Endeksli Haberler</a>
+
+
+    <h1>Anasayfa</h1>
+
+    
+    <div class="weather-container">
+        <h2>Hava Durumu</h2>
+    
+        <div class="weather-info">
+            <img src="/images/gokyuzu1.png">
+            <div class="weather-city">Şehir: <span id="city">Loading...</span></div>
+            <div class="weather-temperature">Sıcaklık: <span id="temperature">Loading...</span>°C</div>
+            <div class="weather-description">Durum: <span id="description">Loading...</span></div>
+        </div>
+    </div>
+    
+
+    <script>
+        // Dolar kuru verisini almak için bir API kullanıyoruz.
+        fetch('https://api.exchangerate-api.com/v4/latest/usd')
+            .then(response => response.json())
+            .then(data => {
+                const dollarValue = data.rates['TRY']; // USD to Turkish Lira (TRY) exchange rate
+
+                // Sonuçları HTML elementine ekliyoruz.
+                document.getElementById('dollar-value').textContent = dollarValue.toFixed(2);
+            })
+            .catch(error => console.error('Hata:', error));
+
+        // Euro kuru verisini almak için bir API kullanıyoruz.
+        fetch('https://api.exchangerate-api.com/v4/latest/eur')
+            .then(response => response.json())
+            .then(data => {
+                const euroValue = data.rates['TRY']; // Euro to Turkish Lira (TRY) exchange rate
+
+                // Sonuçları HTML elementine ekliyoruz.
+                document.getElementById('euro-value').textContent = euroValue.toFixed(2);
+            })
+            .catch(error => console.error('Hata:', error));
+    </script>
+
+<script>
+    const apiKey = '39797ebefc1cd6689bd9afeaec6dbc24';
+    const city = 'İstanbul'; // İstediğiniz şehri buraya yazın
+    const apiUrl = `http://api.weatherstack.com/current?access_key=${apiKey}&query=${city}`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            const city = data.location.name;
+            const temperature = data.current.temperature;
+            const description = data.current.weather_descriptions[0];
+
+            // Sonuçları HTML elementlerine ekliyoruz.
+            document.getElementById('city').textContent = city;
+            document.getElementById('temperature').textContent = temperature;
+            document.getElementById('description').textContent = description;
+        })
+        .catch(error => console.error('Hata:', error));
+</script>
+
+<h1>Son Haberler</h1>
+    <div id="news-list"></div>
+
+    <script>
+        const apiKey1 = '1cc114fb0ec44aae9c5c40a59c384ca0'; // API anahtarınızı buraya ekleyin
+        const apiUrl1 = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + apiKey1;
+
+        fetch(apiUrl1)
+            .then(response => response.json())
+            .then(data => {
+                const newsList = document.getElementById('news-list');
+
+                data.articles.forEach(article => {
+                    const newsItem = document.createElement('div');
+                    newsItem.classList.add('news-item');
+
+                    const newsTitle = document.createElement('h2');
+                    newsTitle.textContent = article.title;
+
+                    const newsDescription = document.createElement('p');
+                    newsDescription.textContent = article.description;
+
+                    newsItem.appendChild(newsTitle);
+                    newsItem.appendChild(newsDescription);
+                    newsList.appendChild(newsItem);
+                });
+            })
+            .catch(error => console.error('Hata:', error));
+    </script>
+
+
+
+
+</body>
+</html>
+

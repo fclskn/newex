@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Ekranı</title>
+    <style>
+
+
+ :root {
+        --gradient-start: #8e44ad; /* Başlangıç rengi (mor) */
+        --gradient-end: #2c3e50;   /* Bitiş rengi (siyah) */
+    }
+    
+    body {
+   
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    
+    .content {
+        text-align: center;
+    }
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px auto;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        label, input, button {
+            margin: 10px 0;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        input, button {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #000000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Giriş Yap</h1>
+    <form action="/" method="post">
+        <div>
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Giriş Yap</button>
+    </form>
+    <a href="/register">Kayıt Ol</a>
+</body>
+</html>

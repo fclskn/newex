@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kur Endeksli Haberler</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Eğer bir CSS dosyanız varsa, burada bağlantı yapabilirsiniz -->
+</head>
+<body>
+
+    <h1>Kur Endeksli Haberler</h1>
+
+    <div class="currency-container">
+        <label for="currency-select">Kur Seçin:</label>
+        <select id="currency-select">
+            <option value="USD">Dolar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <!-- İhtiyacınıza göre diğer kurları da ekleyebilirsiniz -->
+        </select>
+    </div>
+
+    <div id="news-list" class="news-container">
+        <!-- Haberler burada listelenecek -->
+    </div>
+
+
+    <div class="currency-container">
+        <div class="currency-symbol">$</div>
+        <div id="dollar-value">Loading...</div>
+    </div>
+    <div class="currency-container">
+        <div class="currency-symbol">€</div>
+        <div id="euro-value">Loading...</div>
+    </div>
+
+    <script>
+        // Dolar kuru verisini almak için bir API kullanıyoruz.
+        fetch('https://api.exchangerate-api.com/v4/latest/usd')
+            .then(response => response.json())
+            .then(data => {
+                const dollarValue = data.rates['TRY']; // USD to Turkish Lira (TRY) exchange rate
+
+                // Sonuçları HTML elementine ekliyoruz.
+                document.getElementById('dollar-value').textContent = dollarValue.toFixed(2);
+            })
+            .catch(error => console.error('Hata:', error));
+
+        // Euro kuru verisini almak için bir API kullanıyoruz.
+        fetch('https://api.exchangerate-api.com/v4/latest/eur')
+            .then(response => response.json())
+            .then(data => {
+                const euroValue = data.rates['TRY']; // Euro to Turkish Lira (TRY) exchange rate
+
+                // Sonuçları HTML elementine ekliyoruz.
+                document.getElementById('euro-value').textContent = euroValue.toFixed(2);
+            })
+            .catch(error => console.error('Hata:', error));
+    </script>
+
+<h1>Kur Haberleri</h1>
+<div id="news-list"></div>
+
+<script>
+    const apiKey1 = '1cc114fb0ec44aae9c5c40a59c384ca0'; // API anahtarınızı buraya ekleyin
+    const apiUrl1 = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + apiKey1;
+
+    fetch(apiUrl1)
+        .then(response => response.json())
+        .then(data => {
+            const newsList = document.getElementById('news-list');
+
+            data.articles.forEach(article => {
+                const newsItem = document.createElement('div');
+                newsItem.classList.add('news-item');
+
+                const newsTitle = document.createElement('h2');
+                newsTitle.textContent = article.title;
+
+                const newsDescription = document.createElement('p');
+                newsDescription.textContent = article.description;
+
+                newsItem.appendChild(newsTitle);
+                newsItem.appendChild(newsDescription);
+                newsList.appendChild(newsItem);
+            });
+        })
+        .catch(error => console.error('Hata:', error));
+</script>
+
+
+
+
+
+</body>
+</html>

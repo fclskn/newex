@@ -1,0 +1,12 @@
+sayfa1-sayfa2 arası bağlantı sağlanamıyor.
+hava durumu şemasının backgroundu yapılamadı.(image okumuyor)
+sayfanın modifiye işlemleri kaldı.
+delete işlemi eklenebilir.
+vize için postman veya swagger kullanımı zorunlu.(api)
+
+REST (Representational State Transfer): HTTP protokolünü kullanarak kaynaklara erişim sağlayan bir mimaridir. 
+CRUD (Create, Read, Update, Delete) işlemlerini destekler 
+ve genellikle JSON veya XML formatında veri alışverişi yapar.
+Database API:
+Veritabanı Erişim API'leri: Veritabanlarına erişim sağlamak için kullanılan API'ler. Örneğin, Java Database Connectivity (JDBC) gibi.
+framework: Express.js: Node.js üzerinde çalışan web uygulamaları geliştirmek için kullanılır.
